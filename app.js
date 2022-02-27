@@ -21,10 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
-app.use("/auth", usersRouter);
-app.use("/company", companyRouter);
-app.use("/product", productRouter);
-app.use("/keys", keysRouter);
+app.use("/api", indexRouter);
+app.use("/api/auth", usersRouter);
+app.use("/api/company", companyRouter);
+app.use("/api/product", productRouter);
+app.use("/api/keys", keysRouter);
 
 module.exports = app;
